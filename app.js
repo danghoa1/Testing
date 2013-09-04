@@ -1,5 +1,4 @@
 var express = require("express");
-var routes = require("./routes");
 var http = require('http');
 var path = require('path');
 
@@ -23,8 +22,10 @@ if ('development' == app.get('env')) {
 
 // Routing
 
-app.get('/', routes.home);
-app.get('/danghoa1', routes.danghoa1);
+var home = require('./routes/home');
+var danghoa1 = require('./routes/danghoa1');
+app.get('/', home.home);
+app.get('/danghoa1', danghoa1.danghoa1);
 
 
 // Listening to port
