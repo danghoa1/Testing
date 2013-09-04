@@ -1,15 +1,16 @@
 var express = require("express");
+var routes = require("./routes");
 var app = express();
 app.use(express.logger());
 
-app.get('/', function(request, response) {
-  response.send('Hello World!');
-});
 
-app.get('/danghoa1', function(request, response) {
-  response.send('Hello danghoa1!');
-});
+// Routing
 
+app.get('/', routes.index);
+app.get('/danghoa1', routes.danghoa1);
+
+
+// Listening to port
 
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
