@@ -23,7 +23,7 @@ if ('development' == app.get('env')) {
 
 // Routing
 
-app.get('/', routes.index);
+app.get('/', routes.home);
 app.get('/danghoa1', routes.danghoa1);
 
 
