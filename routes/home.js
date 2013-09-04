@@ -1,3 +1,3 @@
 exports.home = function(req, res){
-  res.render('index', { title: 'Testing' });
+  response.send('Hello danghoa1!');
 };
