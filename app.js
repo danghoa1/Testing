@@ -23,9 +23,9 @@ if ('development' == app.get('env')) {
 // Routing
 
 var home = require('./routes/home');
-var danghoa1 = require('./routes/danghoa1');
+var user = require('./routes/user');
 app.get('/', home.home);
-app.get('/danghoa1', danghoa1.danghoa1);
+app.get('/user', user.user);
 
 
 // Listening to port
